@@ -1,25 +1,25 @@
 const initialState = {
-    title: "Take a look at our featured Author!",
-    author:"",
+    title: "Ready For A Laugh?!",
+    joke:"",
     isFetching: false,
     error:""
 };
 
 export const appReducer = (state = initialState, action) =>{
     switch (action.type){
-        case "FETCHING_AUTHOR_START":
+        case "FETCHING_JOKE_START":
             return{
                 ...state,
                 isFetching: true
             }
-        case "FETCHING_AUTHOR_SUCCESS":
+        case "FETCHING_JOKE_SUCCESS":
             return{
                 ...state,
                 isFetching: false,
                 error:"",
-                author: "action.payload"
+                joke: "action.payload"
             }
-        case "FETCHING_AUTHOR_ERROR":
+        case "FETCHING_JOKE_ERROR":
             return{
                 ...state,
                 isFetching: false,

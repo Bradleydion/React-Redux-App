@@ -1,27 +1,27 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
-import {fetchAuthor} from "../actions"
+import {fetchJoke} from "../actions"
 
-const Author = ({title, author, isFetching, error}) =>{
+const Joke = ({title, joke, isFetching, error, fetchJoke}) =>{
     return(
         <>
         <h1>{title}</h1>
-        <h2>Featuerd Author {author}</h2>
+        <h2>Featured Joke {joke}</h2>
         
-        <button>Get New Author!</button>
+        <button onClick={fetchJoke}>Get New Joke!</button>
         </>
     );
 }
 const mapStateToProps = (state) => {
     return{
         title: state.title,
-        author: state.author,
+        joke: state.joke,
         isFetching: state.isFetching,
         error: state.error
     }
 }
 
-const mapDispatchToProps = {fetchAuthor};
+const mapDispatchToProps = {fetchJoke};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Author);
+export default connect(mapStateToProps, mapDispatchToProps)(Joke);
 
