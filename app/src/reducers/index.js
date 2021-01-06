@@ -10,20 +10,20 @@ export const appReducer = (state = initialState, action) =>{
         case "FETCHING_AUTHOR_START":
             return{
                 ...state,
-                // isFetching: true
+                isFetching: true
             }
         case "FETCHING_AUTHOR_SUCCESS":
             return{
                 ...state,
-                // isFetching: false,
-                // error:"",
-                // author: action.payload
+                isFetching: false,
+                error:"",
+                author: action.payload
             }
         case "FETCHING_AUTHOR_ERROR":
             return{
                 ...state,
-                // isFetching: false,
-                // error: action.payload
+                isFetching: false,
+                error: action.payload
             }
         default:
             return state;

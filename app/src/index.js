@@ -7,7 +7,7 @@ import {logger} from "react-logger"
 import App from './App';
 import {appReducer} from './reducers'
 
-const store = createStore(appReducer, applyMiddleware(logger));
+const store = createStore(appReducer);
 
 ReactDOM.render(
   <React.StrictMode>

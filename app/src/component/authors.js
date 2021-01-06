@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
-const Author = ({author, isFetching, error}) =>{
+const Author = ({title, author, isFetching, error}) =>{
     return(
         <>
+        <h1>{title}</h1>
         <h2>Featuerd Author {author}</h2>
         
         <button>Get New Author!</button>
@@ -12,11 +13,14 @@ const Author = ({author, isFetching, error}) =>{
 }
 const mapStateToProps = (state) => {
     return{
-        title: title
+        title: state.title,
+        author: state.author,
+        isFetching: state.isFetching,
+        error: state.error
     }
 }
 
-map
+const mapDispatchToProps = {};
 
 export default connect(mapStateToProps)(Author);
 
