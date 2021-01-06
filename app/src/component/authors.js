@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
+import {fetchAuthor} from "../actions"
 
 const Author = ({title, author, isFetching, error}) =>{
     return(
@@ -20,7 +21,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {fetchAuthor};
 
-export default connect(mapStateToProps)(Author);
+export default connect(mapStateToProps, mapDispatchToProps)(Author);
 

@@ -17,7 +17,7 @@ export const appReducer = (state = initialState, action) =>{
                 ...state,
                 isFetching: false,
                 error:"",
-                author: action.payload
+                author: "action.payload"
             }
         case "FETCHING_AUTHOR_ERROR":
             return{
