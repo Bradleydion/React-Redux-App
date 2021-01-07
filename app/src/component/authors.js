@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import {fetchJoke} from "../actions"
 
@@ -6,8 +6,7 @@ const Joke = ({title, joke, isFetching, error, fetchJoke}) =>{
     return(
         <>
         <h1>{title}</h1>
-        <h2>Featured Joke {joke}</h2>
-        
+        <h2>{joke}</h2>
         <button onClick={fetchJoke}>Get New Joke!</button>
         </>
     );

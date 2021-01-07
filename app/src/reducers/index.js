@@ -17,8 +17,15 @@ export const appReducer = (state = initialState, action) =>{
                 ...state,
                 isFetching: false,
                 error:"",
-                joke: "action.payload"
+                title: action.payload,
             }
+            case "FETCHING_JOKE_SUCCESS2":
+                return{
+                    ...state,
+                    isFetching: false,
+                    error:"",
+                    joke: action.payload
+                }
         case "FETCHING_JOKE_ERROR":
             return{
                 ...state,
